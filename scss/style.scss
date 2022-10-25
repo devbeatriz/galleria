@@ -1,0 +1,174 @@
+@import 'variables-and-mixins';
+
+* {
+  font-family: 'Josefin Sans';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    transition: .4s;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+  @include mobile {
+    padding: 1.1rem;
+  }
+
+  &-brand {
+    color: $primary-color;
+    font-size: 3rem;
+  }
+
+  &-navbar {
+    ul {
+      height: 100%;
+      @include flex-center;
+      @include mobile {
+        display: none;
+      }
+
+      li {
+        margin: 0 1rem;
+        text-transform: uppercase;
+        font-size: .8rem;
+
+        .active {
+          color: $secondary-color;
+        }
+
+        a {
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &-social-media {
+    ul {
+      @include flex-center;
+      height: 100%;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  @include flex-center;
+  @include container;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &-card {
+    width: 31%;
+    height: 400px;
+    margin-bottom: 4%;
+    @include flex-center;
+    flex-direction: column;
+    color: $primary-color;
+    @include mobile {
+      width: 90%;
+      margin-bottom: 6%;
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    &-btn {
+      padding: .6rem 2rem;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $bg-color;
+      }
+    }
+  }
+
+  #card-1 {
+    @include bg-img('animais.jpg');
+  }
+
+  #card-2 {
+    @include bg-img('arquitetura.jpg');
+  }
+
+  #card-3 {
+    @include bg-img('cidade.jpg');
+  }
+
+  #card-4 {
+    @include bg-img('decoracao.jpg');
+  }
+
+  #card-5 {
+    @include bg-img('esportes.jpg');
+  }
+
+  #card-6 {
+    @include bg-img('natureza.jpg');
+  }
+
+  #card-7 {
+    @include bg-img('paisagem.jpg');
+  }
+
+  #card-8 {
+    @include bg-img('pessoas.jpg');
+  }
+
+  #card-9 {
+    @include bg-img('refeicoes.jpg');
+  }
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+
+  span {
+    font-weight: bold;
+    color: $secondary-color;
+  }
+}

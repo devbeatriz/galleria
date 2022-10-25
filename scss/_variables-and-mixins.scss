@@ -1,0 +1,41 @@
+// Cores
+$primary-color: #FFF;
+$secondary-color: #20C997;
+$text-color: #777;
+$bg-color: #000;
+
+//Container
+$container-width: 1170px;
+
+// Mixins
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-img($img) {
+  background-image: url('../img/#{$img}');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: .6s;
+  &:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/#{$img}');
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 425px) {
+    @content
+  }
+}
