@@ -9,7 +9,6 @@ https://user-images.githubusercontent.com/94017930/197764205-313d2c0e-6492-4b0c-
 
 ## :rocket: Tecnologias
  - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
- - [CSS](https://www.w3schools.com/css/)
  - [Sass](https://sass-lang.com/)
  
  
